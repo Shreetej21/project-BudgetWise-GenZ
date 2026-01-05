@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | BudgetWise GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Welcome, <span id="user"></span> 👋</h2>
+  <div class="xp">XP: <span id="xp">0</span></div>
+</header>
+
+<section class="dashboard">
+
+  <!-- Expense Card -->
+  <div class="card">
+    <h3>Add Expense</h3>
+
+    <input type="number" id="amount" placeholder="Amount ₹" />
+
+  <div class="category-buttons"> 
+    <button class="cat-btn" data-category="Food">🍔 Food</button>
+    <button class="cat-btn" data-category="Travel">✈️ Travel</button>
+    <button class="cat-btn" data-category="Shopping">🛍 Shopping</button>
+    <button class="cat-btn" data-category="Clothes">👕 Clothes</button>
+  </div>
+
+
+    <input type="text" id="customCategory" placeholder="Custom category (optional)" />
+
+    <button onclick="addExpense()">Save Expense</button>
+  </div>
+
+  <!-- Summary -->
+  <div class="card">
+    <h3>Monthly Summary</h3>
+    <ul id="summary"></ul>
+  </div>
+
+  <!-- AI Insight -->
+  <div class="card glow">
+    <h3>Smart Insight 🤖</h3>
+    <p id="insight">Add expenses to get insights.</p>
+  </div>
+
+  <!-- Learning Progress -->
+  <div class="card">
+    <h3>Money Learning Progress</h3>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <p>🔥 Streak: <span id="streak">1</span> day</p>
+  </div>
+
+</section>
+
+<script src="app.js"></script>
+<div class="cursor"></div>
+<div class="cursor-trail"></div>
+</body>
+</html>

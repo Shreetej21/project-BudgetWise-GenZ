@@ -1,0 +1,155 @@
+* {
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  color: #fff;
+}
+
+.center {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  width: 320px;
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: linear-gradient(135deg, #00f5ff, #7f00ff);
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.glow {
+  border: 1px solid #00f5ff;
+  box-shadow: 0 0 20px #00f5ff44;
+}
+
+.progress-bar {
+  background: #222;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(90deg, #00f5ff, #7f00ff);
+}
+
+body {
+  cursor: none;
+}
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f5ff;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 245, 255, 0.2);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease-out;
+}
+.category-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.cat-btn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,245,255,0.15);
+}
+
+.cat-btn.active {
+  background: linear-gradient(135deg, #00f5ff, #7f00ff);
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 0 25px rgba(127,0,255,0.6);
+}
+.cat-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cat-btn:active::after {
+  opacity: 1;
+}
