@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BudgetWise GenZ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-bar">
+  <h2>Welcome, Tej 👋</h2>
+  <div class="xp">XP: <span id="xp">0</span></div>
+</header>
+
+<section class="dashboard">
+
+  <!-- Add Expense -->
+  <div class="card">
+    <h3>Add Expense</h3>
+
+    <input type="number" id="amount" placeholder="Amount ₹" />
+
+    <div class="category-buttons">
+      <button class="cat-btn" data-category="Food">🍔 Food</button>
+      <button class="cat-btn" data-category="Travel">✈️ Travel</button>
+      <button class="cat-btn" data-category="Shopping">🛍 Shopping</button>
+      <button class="cat-btn" data-category="Clothes">👕 Clothes</button>
+    </div>
+
+    <input type="text" id="customCategory" placeholder="Custom category (optional)" />
+
+    <button class="primary" onclick="addExpense()">Save Expense</button>
+  </div>
+
+  <!-- Monthly Summary -->
+  <div class="card">
+    <h3>Monthly Summary</h3>
+    <ul id="summary"></ul>
+  </div>
+
+  <!-- AI Insight -->
+  <div class="card glow">
+    <h3>AI Insight</h3>
+    <p>Add expenses to get insights.</p>
+  </div>
+
+  <!-- Learning -->
+  <div class="card">
+    <h3>Money Learning Progress</h3>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <p>🔥 Streak: 1 day</p>
+  </div>
+
+</section>
+
+<!-- Donut Chart -->
+<section class="wide">
+  <h3>Spending Overview</h3>
+
+  <div class="donut-wrapper">
+    <div class="donut">
+      <div class="donut-center">
+        <p id="donutLabel">Total</p>
+        <h2 id="donutValue">₹0</h2>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">Distribution of your expenses</p>
+</section>
+
+<!-- Tooltip -->
+<div id="donutTooltip" class="donut-tooltip"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

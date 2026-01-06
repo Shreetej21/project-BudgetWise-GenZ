@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f2027, #000);
+  color: #fff;
+}
+
+/* Header */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.wide {
+  padding: 30px 20px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.glow {
+  border: 1px solid #00f5ff;
+  box-shadow: 0 0 20px #00f5ff44;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Buttons */
+.primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #00f5ff, #7f00ff);
+  cursor: pointer;
+}
+
+.category-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.cat-btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.cat-btn.active {
+  background: linear-gradient(135deg, #00f5ff, #7f00ff);
+  color: #000;
+}
+
+/* Donut */
+.donut-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.donut {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.donut::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  background: #0f2027;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Tooltip */
+.donut-tooltip {
+  position: fixed;
+  padding: 8px 12px;
+  background: rgba(15,32,39,0.95);
+  border-radius: 8px;
+  font-size: 13px;
+  color: #fff;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -120%);
+  z-index: 9999;
+}
+
+/* Progress */
+.progress-bar {
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 25%;
+  background: linear-gradient(90deg, #00f5ff, #7f00ff);
+}
